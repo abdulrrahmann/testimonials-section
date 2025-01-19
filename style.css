@@ -1,0 +1,163 @@
+:root {
+  --primary-moderate-violet: hsl(263, 55%, 52%);
+  --primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --primary-white: hsl(0, 0%, 100%);
+  --neutral-light-gray: hsl(0, 0%, 81%);
+  --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+  --body-font-size: 13px;
+}
+
+body {
+  font-size: var(--body-font-size);
+  font-family: "Barlow Semi Condensed", serif;
+  background-color: var(--neutral-light-grayish-blue);
+  color: var(--primary-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(250px, 500px));
+  grid-template-rows: repeat(2, 280px);
+  gap: 30px;
+}
+
+@media (min-width: 300px) and (max-width: 1199px) {
+  .container {
+    grid-template-columns: minmax(250px, 300px);
+    grid-template-rows: 1fr 300px 250px 1fr 1fr;
+  }
+}
+
+.container .testimonial {
+  width: fit-content;
+  padding: 25px 35px;
+  border-radius: 8px;
+  box-shadow: 2px 10px 10px 0px #6060602e;
+}
+
+@media (min-width: 1200px) {
+  #danial {
+    grid-column: 1 / 3;
+  }
+  #patrick {
+    grid-column: 2 / 4;
+  }
+}
+#danial {
+  background-color: var(--primary-moderate-violet);
+  position: relative;
+}
+
+#danial::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f10d";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  font-size: 130px;
+  color: rgba(207, 207, 207, 0.7);
+}
+
+#danial p.title {
+  position: relative;
+}
+
+#jonathan {
+  background-color: var(--primary-very-dark-grayish-blue);
+}
+
+#jeanette {
+  background-color: var(--primary-white);
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+#jeanette .name {
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+#jeanette .description {
+  color: hsla(217, 30%, 14%, 0.5);
+}
+
+#jeanette .message {
+  color: hsla(217, 30%, 14%, 0.7);
+}
+
+#patrick {
+  background-color: var(--primary-very-dark-blackish-blue);
+}
+
+#kira {
+  background-color: var(--primary-white);
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+#kira .name {
+  color: var(--primary-very-dark-grayish-blue);
+}
+
+#kira .description {
+  color: hsla(217, 30%, 14%, 0.5);
+}
+
+#kira .message {
+  color: hsla(217, 30%, 14%, 0.7);
+}
+
+@media (min-width: 1200px) {
+  #kira {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+}
+
+.container .testimonial .header {
+  display: flex;
+}
+
+.container .testimonial .header img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.container .testimonial .header .content {
+  margin-left: 15px;
+}
+
+.container .testimonial .header .content .name {
+  margin: 0;
+  font-weight: 500;
+  color: var(--neutral-light-gray);
+}
+
+.container .testimonial .header .content .description {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(207, 207, 207, 0.5);
+}
+
+.container .testimonial .title {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.container .testimonial .message {
+  line-height: 1.4;
+  color: rgba(207, 207, 207, 0.7);
+}
